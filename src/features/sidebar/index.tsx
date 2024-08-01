@@ -1,5 +1,5 @@
-import Navbar from "./components/Navbar/Navbar";
-import SidebarSection from "./components/Sections/sections";
+import Navbar from "./components/navbar/navbar";
+import SidebarSection from "./components/sections/sections";
 import { sidebarFooter, sidebarSections } from "./constants/constants";
 import Link from "next/link";
 

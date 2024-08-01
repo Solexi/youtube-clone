@@ -121,7 +121,7 @@ const section3: SidebarSectionProps = {
       icon: [avatar6],
     },
     {
-      text: "Atlassian",
+      text: "Code Academy",
       icon: [avatar7],
     },
   ],

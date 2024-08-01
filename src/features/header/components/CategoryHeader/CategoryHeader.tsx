@@ -2,9 +2,8 @@
 
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { categoryTags } from "../../constants/constants";
-import { titleToSlug } from "@/utils/utils";
+import { formatText, titleToSlug } from "@/utils/slug";
 import { Button } from "@/components/ui/button";
-import { format } from "util";
 import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -55,13 +54,13 @@ const CategoryHeader = () => {
 
   const handleTagSelect = (param: string, value: string) => {
     const params = new URLSearchParams(searchParams.toString());
-    params.set(format(param), format(value.toString()));
+    params.set(formatText(param), formatText(value.toString()));
 
     router.push(`${pathName}?${params.toString()}`);
   };
 
   return (
-    <div  className="flex bg-background px-4 md:pl-6 py-3 scrollbar-hide w-full sticky z-20">
+    <div  className="flex bg-background-3 px-4 md:pl-6 py-3 scrollbar-hide w-full sticky z-20 border-y top-0">
       {showLeftIcon && (
         <Button
           variant={"ghost"}
@@ -83,7 +82,7 @@ const CategoryHeader = () => {
               className={`rounded-[32px] font-[400] text-whitecolor hover:text-background-3 bg-border border-[0.3px] border-accent-foreground ${
                 isActive ? "bg-white text-background-3" : ""
               }`}
-            >
+            > 
               {category}
             </Button>
           );

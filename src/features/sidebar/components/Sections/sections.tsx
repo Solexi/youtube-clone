@@ -3,7 +3,7 @@
 import { FC, useState } from "react";
 import { SidebarSectionProps } from "../../types/types";
 import { usePathname } from "next/navigation";
-import { titleToSlug } from "@/utils/utils";
+import { titleToSlug } from "@/utils/slug";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -33,7 +33,6 @@ const SidebarSection: FC<SidebarSectionProps> = ({
         } else {
           url = `/${url}`;
         }
-        // const isActive = pathName === "/" && item.default ? true : pathName.includes(url);
         const isActive = pathName.includes(url);
         return (
           <Link

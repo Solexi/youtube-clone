@@ -1,5 +1,5 @@
-import Header from "./components/Header/Header";
-import CategoryHeader from "./components/CategoryHeader/CategoryHeader";
+import Header from "./components/header/header";
+import CategoryHeader from "./components/categoryHeader/categoryHeader";
 
 
 export {

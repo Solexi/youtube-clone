@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { navbarItems } from "../../constants/constants";
-import { titleToSlug } from "@/utils/utils";
+import { titleToSlug } from "@/utils/slug";
 import Link from "next/link";
 import Image from "next/image";
 

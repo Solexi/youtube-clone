@@ -36,7 +36,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background-2 text-foreground;
+    @apply bg-background text-foreground;
   }
 }
 

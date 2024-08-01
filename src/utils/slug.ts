@@ -21,9 +21,6 @@ const titleToSlug = (title: string) => {
     slug = slug.replace(/\@\-|\-\@|\@/gi, '');
     return slug;
 }
-const title = "This is a special title, isn't it?";
-const slug = titleToSlug(title);
-console.log(slug);
 
 export {
     formatText,
