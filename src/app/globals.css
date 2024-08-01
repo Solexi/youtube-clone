@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --background-2: 0 0% 7%;
+    --background-3: 0 0% 13%;
+    --foreground: 0 0% 64%;
+    --white-color: #a3a3a3;
+
+    --primary: 0 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 19%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 19%;
+    --muted-foreground: 0 0% 67%;
+
+    --accent: 0 0% 19%;
+    --accent-foreground: 0 0% 67%;
+
+    --border: 0 0% 19%;
+    --radius: 0.5rem;
+  }
+}
+@layer utilities {
+  .text-white-color {
+    color: hsl(var(--white-color));
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background-2 text-foreground;
+  }
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  visibility: hidden;
+  width: 10px;
+}
+
+.scrollbar-hidden::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  width: 10px;
+}
+
+.scrollbar-hidden:hover::-webkit-scrollbar {
+  visibility: visible;
+  width: 10px;
+  background: #00000000;
+}
+
+.scrollbar-hidden:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+  width: 10px;
+  background: #303030;
+  border-radius: 50px;
+}
