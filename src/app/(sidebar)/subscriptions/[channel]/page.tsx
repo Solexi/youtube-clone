@@ -96,7 +96,7 @@ const Subscription = ({ params }: { params: { channel: string } }) => {
               </p>
             </div>
           </div>
-          <Button className="bg-primary text-foreground rounded-sm hover:bg-primary/80">
+          <Button className="bg-primary font-bold text-white rounded-sm hover:bg-primary/80">
             SUBSCRIBE
           </Button>
         </div>
@@ -142,9 +142,22 @@ const Subscription = ({ params }: { params: { channel: string } }) => {
       </div>
 
       {/* SMALL VIDEO PLAYER */}
-      <div className="flex gap-6 px-4 md:px-16 pb-6 border-b border-border">
-        <div className="flex-1 w-1/3 md:max-w-[424px]">
-          <VideoPlayer title={foundVideoData?.title} />
+      <div className="px-4 md:px-16">
+        <div className="flex gap-6 pb-6 border-b border-border">
+          <div className="flex-1 w-[33%] md:max-w-[424px]">
+            <VideoPlayer title={foundVideoData?.title} />
+          </div>
+          <div className="hidden lg:flex flex-col gap-5 lg:max-w-[40%]">
+            <h2 className="font-normal text-base md:text-lg">
+              {foundVideoData.title}
+            </h2>
+            <div className="flex items-center gap-1 text-muted-foreground text-sm font-bold">
+              <span>{foundVideoData.views.toLocaleString()} views</span>
+              {" . "}
+              <span>{foundVideoData.datePosted}</span>
+            </div>
+            <p className="text-sm font-normal">{foundVideoData.description}</p>
+          </div>
         </div>
       </div>
 

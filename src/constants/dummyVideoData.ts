@@ -163,8 +163,8 @@ const dummyComments: CommentProps[] = [
     content: "This concept is much clearer now.",
     timestamp: "6 days ago",
     likes: 200,
-    dislikes: 3
-  }
+    dislikes: 3,
+  },
 ];
 
 const videos: VideoProps[] = [
@@ -176,7 +176,7 @@ const videos: VideoProps[] = [
     datePosted: "2 weeks ago",
     thumbnail: discord,
     description:
-      "In this video, we delve deep into the concept of closures in JavaScript.",
+      "In this video, we delve deep into the concept of closures in JavaScript. Closures are a fundamental aspect of the language, allowing functions to access variables from an outer function even after the outer function has finished executing. We will cover the basics of how closures work, their use cases, and common patterns involving closures.",
     likes: 23000,
     dislikes: 300,
     duration: "12:45",
@@ -218,7 +218,8 @@ const videos: VideoProps[] = [
     views: 320000,
     datePosted: "2 months ago",
     thumbnail: instagram,
-    description: "A countdown of the top 10 romantic comedies you must watch.",
+    description:
+      "A countdown of the top 10 romantic comedies you must watch. Romantic comedies have been a beloved genre for decades, offering a blend of humor, romance, and feel-good moments. In this video, we'll explore some of the best romantic comedies that have stood the test of time, from classics to modern hits. Whether you're looking for a movie to watch on a cozy night in or a film to lift your spirits, this list has something for everyone.",
     likes: 18000,
     dislikes: 200,
     duration: "15:30",
@@ -266,13 +267,14 @@ const videos: VideoProps[] = [
     views: 150000,
     datePosted: "3 days ago",
     thumbnail: youtubeThumbnail,
-    description: "A beginner's guide to Rust programming.",
+    description:
+      "A beginner's guide to Rust programming. Rust is a systems programming language that aims to provide memory safety without sacrificing performance. In this video, we'll cover the basics of Rust, including its syntax, key features, and how it compares to other languages like C and C++. Whether you're new to programming or have experience with other languages, this video will help you get started with Rust.",
     likes: 8000,
     dislikes: 50,
     duration: "12:30",
     tags: ["Rust", "Programming", "Beginner"],
     subscribers: 100000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Learn JavaScript in 30 Minutes",
@@ -281,7 +283,8 @@ const videos: VideoProps[] = [
     views: 150000,
     datePosted: "14 months ago",
     thumbnail: netflix,
-    description: "A quick guide to learning JavaScript.",
+    description:
+      "A quick guide to learning JavaScript. JavaScript is one of the most popular programming languages in the world, used for both client-side and server-side development. In this video, we'll cover the basics of JavaScript, including variables, functions, loops, and events. Our goal is to give you a solid foundation in JavaScript so you can start building your own web applications. This crash course is perfect for beginners who want to learn the essentials of JavaScript quickly and efficiently.",
     likes: 1200,
     dislikes: 50,
     duration: "30:00",
@@ -331,7 +334,8 @@ const videos: VideoProps[] = [
     views: 200000,
     datePosted: "1 year ago",
     thumbnail: spotify,
-    description: "The best music hits of the year.",
+    description:
+      "The best music hits of the year. 2023 has been a fantastic year for music, with many new artists emerging and established artists releasing chart-topping hits. In this video, we'll count down the top 10 music hits of 2023, featuring a mix of genres and styles. From pop to hip-hop, rock to electronic, these songs have dominated the airwaves and streaming platforms. Join us as we celebrate the best music of the year and discover new tracks to add to your playlist.",
     likes: 1800,
     dislikes: 30,
     duration: "15:00",
@@ -346,7 +350,8 @@ const videos: VideoProps[] = [
     views: 100000,
     datePosted: "2 days ago",
     thumbnail: tiktok,
-    description: "A list of the best romantic comedies.",
+    description:
+      "A list of the best romantic comedies. Romantic comedies are the perfect blend of humor and romance, offering a delightful escape from everyday life. In this video, we'll explore some of the best romantic comedies that you should add to your watchlist. From timeless classics to recent hits, these films are sure to make you laugh, cry, and fall in love. Whether you're planning a movie night with friends or a cozy evening in, these romantic comedies are guaranteed to entertain and uplift your spirits.",
     likes: 900,
     dislikes: 20,
     duration: "20:00",
@@ -361,28 +366,30 @@ const videos: VideoProps[] = [
     views: 120000,
     datePosted: "8 months ago",
     thumbnail: twitter,
-    description: "Learn the basics of databases.",
+    description:
+      "Learn the basics of databases. Databases are a crucial component of modern applications, allowing for efficient storage and retrieval of data. In this video, we'll cover the fundamental concepts of databases, including different types of databases (relational, NoSQL, etc.), database design, and SQL (Structured Query Language). We'll also discuss the importance of data integrity and how to manage database transactions. Whether you're a beginner or looking to refresh your knowledge, this video will provide a comprehensive introduction to databases.",
     likes: 1100,
     dislikes: 40,
     duration: "25:00",
     tags: ["Databases"],
-    subscribers: 400000,
+    subscribers: 600000,
     comments: dummyComments,
   },
   {
     title: "Rust Ownership and Borrowing",
-    channelName: "Let's get Rusty",
-    channelAvatar: avatar1,
-    views: 95000,
-    datePosted: "1 week ago",
+    channelName: "Tech Guru",
+    channelAvatar: avatar7,
+    views: 110000,
+    datePosted: "10 months ago",
     thumbnail: discord,
-    description: "Understanding ownership and borrowing in Rust.",
-    likes: 5000,
-    dislikes: 20,
-    duration: "15:00",
-    tags: ["Rust", "Programming", "Advanced"],
-    subscribers: 100000,
-    comments: dummyComments
+    description:
+      "Deep dive into Rust's ownership model. Ownership and borrowing are key concepts in Rust that enable memory safety without a garbage collector. In this video, we explain how Rust's ownership model works, including the rules of ownership, borrowing, and lifetimes. We will also discuss common pitfalls and best practices for managing ownership in Rust. By the end of this video, you will have a solid understanding of how to use Rust's ownership features effectively.",
+    likes: 900,
+    dislikes: 10,
+    duration: "22:00",
+    tags: ["Rust"],
+    subscribers: 60000,
+    comments: dummyComments,
   },
   {
     title: "Top 10 Mobile Apps of 2024",
@@ -391,7 +398,8 @@ const videos: VideoProps[] = [
     views: 200000,
     datePosted: "5 days ago",
     thumbnail: instagram,
-    description: "A countdown of the top 10 mobile apps in 2024.",
+    description:
+      "In this exciting video, we present a countdown of the top 10 mobile apps of 2024. These apps have been selected based on their popularity, user reviews, and innovative features. We cover a variety of categories, including productivity, entertainment, health, and social networking. For each app, we provide an overview of its functionality, key features, and why it stands out from the rest.",
     likes: 9000,
     dislikes: 30,
     duration: "20:00",
@@ -404,10 +412,10 @@ const videos: VideoProps[] = [
         content: "Great list! Found some new apps to try.",
         timestamp: "4 days ago",
         likes: 400,
-        dislikes: 6
+        dislikes: 6,
       },
-      ...(dummyComments)
-    ]
+      ...dummyComments,
+    ],
   },
   {
     title: "CS50 2024 - Lecture 1",
@@ -416,7 +424,8 @@ const videos: VideoProps[] = [
     views: 300000,
     datePosted: "1 month ago",
     thumbnail: netflix,
-    description: "The first lecture of the 2024 CS50 course.",
+    description:
+      "Welcome to the first lecture of CS50 2024! This introductory lecture sets the stage for the entire course. We begin with an overview of what computer science is and why it matters. You'll learn about the different areas of computer science, including algorithms, data structures, software engineering, and more. We also discuss the importance of problem-solving and computational thinking.",
     likes: 15000,
     dislikes: 70,
     duration: "1:30:00",
@@ -429,10 +438,10 @@ const videos: VideoProps[] = [
         content: "Excited to start this course!",
         timestamp: "29 days ago",
         likes: 500,
-        dislikes: 0
+        dislikes: 0,
       },
-      ...(dummyComments)
-    ]
+      ...dummyComments,
+    ],
   },
   {
     title: "Data Structures - Introduction",
@@ -441,13 +450,14 @@ const videos: VideoProps[] = [
     views: 250000,
     datePosted: "2 months ago",
     thumbnail: spotify,
-    description: "An introduction to data structures.",
+    description:
+      "In this introductory video on data structures, we cover the basics of what data structures are and why they are important in computer science. We discuss different types of data structures, including arrays, linked lists, stacks, queues, trees, and graphs. For each data structure, we explain its characteristics, use cases, and provide examples of how they are used in real-world applications.",
     likes: 12000,
     dislikes: 50,
     duration: "25:00",
     tags: ["Data Structures", "Computer Science", "Education"],
     subscribers: 180000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Morning Prayer Routine",
@@ -456,13 +466,14 @@ const videos: VideoProps[] = [
     views: 80000,
     datePosted: "2 days ago",
     thumbnail: tiktok,
-    description: "Start your day with this calming morning prayer routine.",
+    description:
+      "Start your day with this calming morning prayer routine. In this video, we guide you through a series of prayers and meditations designed to help you begin your day with a sense of peace and gratitude. We include a variety of prayers for different intentions, such as strength, guidance, and thankfulness. Additionally, we provide tips on how to create a morning routine that incorporates prayer and meditation, setting a positive tone for the rest of the day.",
     likes: 4000,
     dislikes: 10,
     duration: "10:00",
     tags: ["Prayer", "Meditation", "Morning Routine"],
     subscribers: 90000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Setting Up a Modern JavaScript Project",
@@ -471,13 +482,14 @@ const videos: VideoProps[] = [
     views: 110000,
     datePosted: "1 week ago",
     thumbnail: twitter,
-    description: "Learn how to set up a modern JavaScript project without boilerplate.",
+    description:
+      "In this tutorial, we walk you through the process of setting up a modern JavaScript project from scratch. We cover everything from choosing the right tools and frameworks to setting up a development environment and writing your first lines of code. You'll learn how to use popular tools like Webpack, Babel, and ESLint to create a streamlined and efficient workflow.",
     likes: 5000,
     dislikes: 15,
     duration: "20:00",
     tags: ["JavaScript", "Project Setup", "No Boilerplate"],
     subscribers: 130000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "JavaScript Arrays Explained",
@@ -486,28 +498,30 @@ const videos: VideoProps[] = [
     views: 140000,
     datePosted: "3 days ago",
     thumbnail: youtubeThumbnail,
-    description: "Deep dive into JavaScript arrays and their methods.",
+    description:
+      "In this video, we take a deep dive into JavaScript arrays and their methods. We start with the basics of what arrays are and how to create them. Then, we explore various array methods such as push, pop, shift, unshift, map, filter, and reduce. We provide practical examples and code snippets to demonstrate how these methods work and how they can be used to manipulate arrays effectively. This video is perfect for beginners who want to gain a solid understanding of arrays and for experienced developers looking to refresh their knowledge.",
     likes: 7000,
     dislikes: 30,
     duration: "12:00",
     tags: ["JavaScript", "Arrays", "Programming"],
     subscribers: 160000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Best Android Tips and Tricks",
     channelName: "ckmobile",
     channelAvatar: avatar4,
-    views: 120000,
-    datePosted: "2 weeks ago",
+    views: 180000,
+    datePosted: "4 days ago",
     thumbnail: discord,
-    description: "Learn some of the best tips and tricks for Android devices.",
-    likes: 6000,
+    description:
+      "Discover some of the best tips and tricks for getting the most out of your Android device in this comprehensive video. We cover a range of topics, including hidden features, customization options, productivity hacks, and security tips. Learn how to optimize your device's performance, extend battery life, and enhance your overall user experience. Whether you're a new Android user or a seasoned pro, this video offers valuable insights and practical advice to help you make the most of your smartphone.",
+    likes: 8500,
     dislikes: 25,
     duration: "18:00",
-    tags: ["Mobile", "Android", "Tips"],
-    subscribers: 150000,
-    comments: dummyComments
+    tags: ["Android", "Tips", "Tricks"],
+    subscribers: 140000,
+    comments: dummyComments,
   },
   {
     title: "CS50 2024 - Problem Set 1 Walkthrough",
@@ -516,7 +530,8 @@ const videos: VideoProps[] = [
     views: 180000,
     datePosted: "3 weeks ago",
     thumbnail: instagram,
-    description: "A detailed walkthrough of Problem Set 1.",
+    description:
+      "In this detailed walkthrough of Problem Set 1 for CS50 2024, we dive deep into the problem-solving approach, dissecting each step of the process. You'll learn how to tackle complex problems and apply the foundational concepts taught in the course to develop effective solutions. Whether you're struggling with specific aspects of the problem set or looking for additional insights, this video is designed to guide you through every stage, providing tips and strategies to enhance your understanding and coding skills.",
     likes: 9000,
     dislikes: 40,
     duration: "45:00",
@@ -526,13 +541,14 @@ const videos: VideoProps[] = [
       {
         name: "Frank Miller",
         avatar: "path/to/avatar6.jpg",
-        content: "This walkthrough really helped me understand the problems.",
+        content:
+          "This walkthrough really helped me understand the problems. The explanations were clear and the step-by-step approach made it easier to follow along.",
         timestamp: "20 days ago",
         likes: 350,
-        dislikes: 5
+        dislikes: 5,
       },
-      ...(dummyComments)
-    ]
+      ...dummyComments,
+    ],
   },
   {
     title: "Operating Systems - Processes",
@@ -541,13 +557,14 @@ const videos: VideoProps[] = [
     views: 170000,
     datePosted: "1 month ago",
     thumbnail: netflix,
-    description: "Understanding processes in operating systems.",
+    description:
+      "This video provides a comprehensive overview of processes in operating systems. We start with the basics of process management, exploring how operating systems handle processes, scheduling, and resource allocation. You'll gain a deeper understanding of process states, transitions, and the significance of process control blocks. With detailed explanations and visual aids, this video is perfect for students and professionals looking to grasp the core concepts of operating system processes and their role in system performance.",
     likes: 8000,
     dislikes: 35,
     duration: "30:00",
     tags: ["Operating Systems", "Computer Science", "Education"],
     subscribers: 180000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Evening Meditation for Relaxation",
@@ -556,7 +573,8 @@ const videos: VideoProps[] = [
     views: 60000,
     datePosted: "4 days ago",
     thumbnail: spotify,
-    description: "Relax and unwind with this evening meditation session.",
+    description:
+      "Join us for a calming evening meditation session designed to help you unwind and relax after a long day. This guided meditation focuses on reducing stress and promoting a sense of tranquility. You'll be guided through breathing exercises, relaxation techniques, and positive affirmations to help you let go of the day's tension and prepare for a restful night. Perfect for anyone looking to incorporate mindfulness into their evening routine and achieve a peaceful state of mind.",
     likes: 3000,
     dislikes: 8,
     duration: "15:00",
@@ -566,13 +584,14 @@ const videos: VideoProps[] = [
       {
         name: "Jackie Robinson",
         avatar: avatar1,
-        content: "Perfect way to end the day. So relaxing.",
+        content:
+          "Perfect way to end the day. The meditation was soothing and helped me relax completely. Thank you for this wonderful session.",
         timestamp: "3 days ago",
         likes: 120,
-        dislikes: 1
+        dislikes: 1,
       },
-      ...(dummyComments)
-    ]
+      ...dummyComments,
+    ],
   },
   {
     title: "Clean Code Practices for JavaScript",
@@ -581,13 +600,14 @@ const videos: VideoProps[] = [
     views: 90000,
     datePosted: "2 weeks ago",
     thumbnail: twitter,
-    description: "Best practices for writing clean code in JavaScript.",
+    description:
+      "In this video, we explore best practices for writing clean and maintainable JavaScript code. You'll learn about important coding principles such as modularization, readability, and consistency. We'll cover techniques for organizing your code, naming conventions, and avoiding common pitfalls that can lead to messy or inefficient code. By following these practices, you can improve the quality of your codebase, make it easier to maintain, and enhance your overall development workflow.",
     likes: 4000,
     dislikes: 20,
     duration: "18:00",
     tags: ["JavaScript", "Clean Code", "Best Practices"],
     subscribers: 130000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Building Responsive Websites with Tailwind CSS",
@@ -596,7 +616,8 @@ const videos: VideoProps[] = [
     views: 125000,
     datePosted: "1 week ago",
     thumbnail: youtubeThumbnail,
-    description: "Learn how to build responsive websites using Tailwind CSS.",
+    description:
+      "Discover how to build responsive websites from scratch using Tailwind CSS in this comprehensive tutorial. We start with an introduction to Tailwind CSS, covering its utility-first approach and key features. You'll learn how to create responsive layouts, customize your design system, and implement modern design patterns with ease. By the end of the video, you'll have the skills to build visually appealing and responsive websites that adapt seamlessly to different screen sizes and devices.",
     likes: 6000,
     dislikes: 25,
     duration: "16:00",
@@ -606,13 +627,14 @@ const videos: VideoProps[] = [
       {
         name: "Nancy Hall",
         avatar: avatar4,
-        content: "Tailwind CSS is amazing! Thanks for the tutorial.",
+        content:
+          "Tailwind CSS is amazing! The tutorial was clear and very helpful. I feel confident in building responsive sites now.",
         timestamp: "5 days ago",
         likes: 220,
-        dislikes: 3
+        dislikes: 3,
       },
-      ...(dummyComments)
-    ]
+      ...dummyComments,
+    ],
   },
   {
     title: "Building a To-Do App with Redux",
@@ -621,13 +643,14 @@ const videos: VideoProps[] = [
     views: 98000,
     datePosted: "5 days ago",
     thumbnail: discord,
-    description: "Learn how to build a To-Do app using Redux.",
+    description:
+      "In this tutorial, we walk through the process of building a To-Do application using Redux for state management. The video covers everything from setting up your project to implementing Redux actions and reducers. You'll learn how to manage application state efficiently, handle user interactions, and persist data. This project-based approach will help solidify your understanding of Redux concepts and give you practical experience in building real-world applications.",
     likes: 4800,
     dislikes: 20,
     duration: "22:00",
     tags: ["Redux", "JavaScript", "Web Development"],
     subscribers: 160000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Understanding Docker Containers",
@@ -636,7 +659,8 @@ const videos: VideoProps[] = [
     views: 85000,
     datePosted: "2 weeks ago",
     thumbnail: instagram,
-    description: "A comprehensive guide to understanding Docker containers.",
+    description:
+      "This video provides a deep dive into Docker containers, explaining what they are and how they work. You'll learn about containerization concepts, the differences between containers and virtual machines, and how to use Docker to create and manage containers. With practical examples and demonstrations, this tutorial will help you understand the benefits of containerization for developing, deploying, and scaling applications efficiently.",
     likes: 3900,
     dislikes: 18,
     duration: "14:00",
@@ -646,13 +670,14 @@ const videos: VideoProps[] = [
       {
         name: "Paul Brown",
         avatar: avatar6,
-        content: "Great explanation. Docker seems less intimidating now.",
+        content:
+          "Great explanation. Docker seems less intimidating now. The examples really clarified how containers work.",
         timestamp: "12 days ago",
         likes: 160,
-        dislikes: 3
+        dislikes: 3,
       },
-      ...(dummyComments)
-    ]
+      ...dummyComments,
+    ],
   },
   {
     title: "JavaScript Async/Await Tutorial",
@@ -661,13 +686,14 @@ const videos: VideoProps[] = [
     views: 110000,
     datePosted: "1 week ago",
     thumbnail: netflix,
-    description: "Learn how to use async/await in JavaScript.",
+    description:
+      "This tutorial covers the use of async/await in JavaScript, offering a clear explanation of how to work with asynchronous code. You'll learn how to simplify your code with async/await, handle asynchronous operations more efficiently, and avoid common pitfalls associated with traditional callback-based approaches. The video includes practical examples and real-world use cases to help you master asynchronous programming in JavaScript.",
     likes: 5600,
     dislikes: 25,
     duration: "18:00",
     tags: ["JavaScript", "Async/Await", "Programming"],
     subscribers: 100000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Basics of Algorithms",
@@ -676,13 +702,14 @@ const videos: VideoProps[] = [
     views: 220000,
     datePosted: "1 month ago",
     thumbnail: tiktok,
-    description: "Introduction to algorithms and their importance.",
+    description:
+      "This introductory video explores the fundamental concepts of algorithms, including sorting, searching, and complexity analysis. You'll gain insights into how algorithms are designed and evaluated, learn about common algorithmic techniques, and understand their impact on performance. With clear explanations and illustrative examples, this video is an excellent starting point for anyone looking to strengthen their knowledge of algorithms and their applications in computer science.",
     likes: 12000,
     dislikes: 55,
     duration: "28:00",
     tags: ["Algorithms", "Computer Science", "CS50"],
     subscribers: 200000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Creating a Music Playlist with JavaScript",
@@ -691,13 +718,14 @@ const videos: VideoProps[] = [
     views: 76000,
     datePosted: "3 weeks ago",
     thumbnail: spotify,
-    description: "Build a music playlist application using JavaScript.",
+    description:
+      "In this project-based tutorial, you'll learn how to create a music playlist application using JavaScript. We'll guide you through building features such as adding and removing songs, playing music, and managing playlists. You'll get hands-on experience with DOM manipulation, event handling, and local storage to persist data. By following along, you'll gain practical skills in JavaScript development and create a functional music playlist app from scratch.",
     likes: 3200,
     dislikes: 12,
     duration: "24:00",
     tags: ["JavaScript", "Music", "Web Development"],
     subscribers: 150000,
-    comments:dummyComments
+    comments: dummyComments,
   },
   {
     title: "Introduction to Databases",
@@ -706,13 +734,14 @@ const videos: VideoProps[] = [
     views: 175000,
     datePosted: "2 months ago",
     thumbnail: youtubeThumbnail,
-    description: "Learn the basics of databases in this introductory video.",
+    description:
+      "This video serves as an introductory guide to databases, covering essential concepts such as database design, normalization, and querying. You'll learn about different types of databases, their applications, and the basics of SQL for interacting with relational databases. Whether you're new to database management or looking to refresh your knowledge, this video provides a solid foundation in understanding how databases work and their role in data management.",
     likes: 9500,
     dislikes: 40,
     duration: "20:00",
     tags: ["Databases", "Computer Science", "Education"],
     subscribers: 180000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Live Code: Building a Weather App",
@@ -721,13 +750,14 @@ const videos: VideoProps[] = [
     views: 99000,
     datePosted: "4 days ago",
     thumbnail: discord,
-    description: "Watch live as we build a weather app from scratch.",
+    description:
+      "Watch live as we build a weather app from scratch using JavaScript. This live coding session covers the entire development process, including API integration, user interface design, and handling real-time data. You'll see how to create a functional weather application that fetches weather data from an external API and displays it to users. This live session is a great opportunity to learn coding techniques and best practices while working on a practical project.",
     likes: 5200,
     dislikes: 22,
     duration: "30:00",
     tags: ["JavaScript", "Weather App", "Live Coding"],
     subscribers: 160000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Tailwind CSS: Building a Responsive Navbar",
@@ -736,13 +766,14 @@ const videos: VideoProps[] = [
     views: 70000,
     datePosted: "2 weeks ago",
     thumbnail: instagram,
-    description: "Create a responsive navbar using Tailwind CSS.",
+    description:
+      "In this tutorial, you'll learn how to build a responsive navigation bar using Tailwind CSS. We cover the process of designing and implementing a flexible navbar that adapts to different screen sizes, enhancing the user experience across devices. You'll gain insights into Tailwind's utility classes and responsive design techniques, making it easier to create modern, stylish, and functional navigation elements for your web projects.",
     likes: 3400,
     dislikes: 16,
     duration: "15:00",
     tags: ["Tailwind CSS", "Web Design", "Responsive"],
     subscribers: 130000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Prayer for Stress Relief",
@@ -751,13 +782,14 @@ const videos: VideoProps[] = [
     views: 50000,
     datePosted: "1 week ago",
     thumbnail: netflix,
-    description: "A calming prayer session for stress relief.",
+    description:
+      "This video offers a calming prayer session aimed at relieving stress and fostering a sense of inner peace. The prayer focuses on relaxation and emotional well-being, providing a soothing experience that helps you let go of worries and embrace a moment of serenity. Ideal for those seeking spiritual support and a peaceful mind, this session integrates gentle guidance and meditative practices to enhance your overall sense of calm.",
     likes: 2900,
     dislikes: 10,
     duration: "12:00",
     tags: ["Prayer", "Meditation", "Stress Relief"],
     subscribers: 90000,
-    comments: dummyComments
+    comments: dummyComments,
   },
   {
     title: "Building a Full-Stack App with Rust",
@@ -766,14 +798,15 @@ const videos: VideoProps[] = [
     views: 135000,
     datePosted: "2 weeks ago",
     thumbnail: spotify,
-    description: "Learn how to build a full-stack application using Rust.",
+    description:
+      "This in-depth tutorial guides you through building a full-stack application using Rust. From setting up your development environment to implementing both the frontend and backend, you'll gain hands-on experience with Rust's features and ecosystem. The video covers key concepts such as Rust's ownership model, web frameworks, and database integration. By the end of the tutorial, you'll have a solid understanding of how to create robust and scalable applications using Rust.",
     likes: 6800,
     dislikes: 27,
     duration: "40:00",
     tags: ["Rust", "Full-Stack", "Programming"],
     subscribers: 100000,
-    comments: dummyComments
-  }
+    comments: dummyComments,
+  },
 ];
 
 // console.log(videos.length)
