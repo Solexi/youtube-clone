@@ -30,9 +30,9 @@ const SidebarSection: FC<SidebarSectionProps> = ({
         let url = titleToSlug(item.text);
         if (title) {
           url = `${titleToSlug(title)}/${url}`;
-        } else {
-          url = `/${url}`;
+          // url = titleToSlug(title) + "/" + titleToSlug(item.text)
         }
+        url = `/${url}`;
         const isActive = pathName.includes(url);
         return (
           <Link

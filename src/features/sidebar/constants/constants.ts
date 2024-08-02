@@ -97,7 +97,7 @@ const section3: SidebarSectionProps = {
   title: "Subscriptions",
   items: [
     {
-      text: "Let's get Rusty",
+      text: "Let's Get Rusty",
       icon: [avatar1],
     },
     {

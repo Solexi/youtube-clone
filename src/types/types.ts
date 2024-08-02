@@ -13,7 +13,7 @@ interface CommentProps {
 interface VideoProps {
     title: string;
     channelName: string;
-    channelAvatar: string | StaticImageData;
+    channelAvatar: any | string | StaticImageData;
     views: number;
     datePosted: string;
     thumbnail: string | StaticImageData;
@@ -38,8 +38,19 @@ interface ThumbnailCardProps {
     small?: boolean;
     mobileView?: boolean;
 }
+
+interface ChannelNavigationProps {
+    name: string;
+    path: string;
+}
+
+interface VideoPlayerProps {
+    
+}
+
 export type {
     CommentProps,
     VideoProps,
-    ThumbnailCardProps
+    ThumbnailCardProps,
+    ChannelNavigationProps
 }

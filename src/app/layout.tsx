@@ -3,7 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/features/header/components/header/header";
 
-const roboto = Roboto({ weight: '700', subsets: ["latin"] });
+const roboto = Roboto({ weight: ['100', '300', '400', '500', '700', '900'], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Youtube Clone",

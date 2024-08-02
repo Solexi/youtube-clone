@@ -56,24 +56,6 @@ const ThumbnailCard: FC<ThumbnailCardProps> = ({
           </p>
         </div>
       </div>
-      {/* <div className={`${mobileView ? "ml-2" : "mt-2"} flex flex-col`}>
-        <p className="text-sm font-semibold">{title}</p>
-        <div className="flex items-center gap-2 mt-1">
-          {showAvatar && (
-            <Image
-              src={avatar}
-              alt={`${channelName} avatar`}
-              width={24}
-              height={24}
-              className="rounded-full"
-            />
-          )}
-          <span className="text-xs text-gray-500">{channelName}</span>
-        </div>
-        <span className="text-xs text-gray-500">
-          {views} views • {datePosted}
-        </span>
-      </div> */}
     </Link>
   );
 };
