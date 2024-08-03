@@ -1,11 +1,13 @@
+"use client"
 import { ThumbnailCardProps } from "@/types/types";
-import { titleToSlug } from "@/utils/slug";
+import { formatText, titleToSlug } from "@/utils/slug";
 import { Avatar } from "@radix-ui/react-avatar";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { AvatarFallback, AvatarImage } from "../ui/avatar";
 import { numberFormater } from "@/utils/numberFormater";
+import { useSearchParams } from "next/navigation";
 
 const ThumbnailCard: FC<ThumbnailCardProps> = ({
   thumbnail,
@@ -19,9 +21,13 @@ const ThumbnailCard: FC<ThumbnailCardProps> = ({
   hideAvatar,
   small,
 }) => {
+  const searchParams = useSearchParams();
+  const params = new URLSearchParams(searchParams.toString())
+  params.set('v', titleToSlug(title))
   return (
     <Link
-      href={`/videos/${titleToSlug(title)}`}
+      // href={`/videos/${titleToSlug(title)}`}
+      href={`/watch?${params.toString()}`}
       className={`${mobileView ? "flex gap-2" : ""} group`}
     >
       {/* THUMBNAIL */}

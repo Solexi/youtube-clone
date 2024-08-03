@@ -3,7 +3,10 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/features/header/components/header/header";
 
-const roboto = Roboto({ weight: ['100', '300', '400', '500', '700', '900'], subsets: ["latin"] });
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Youtube Clone",
@@ -19,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`max-w-[100vw] ${roboto.className}`}>
         <Header />
-        <div className="flex flex-col h-[calc(100vh-56px)]">{children}</div>
+        <div className="flex flex-col h-[calc(100vh-56px)] overflow-auto scrollbar-hidden">{children}</div>
       </body>
     </html>
   );

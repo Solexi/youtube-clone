@@ -20,9 +20,9 @@ import { ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import VideoPlayer from "@/components/videoPlayer/videoPlayer";
+import ChannelVideos from "@/components/channelVideos/channelVideos";
 
 const Subscription = ({ params }: { params: { channel: string } }) => {
-  // const [videoData, setVideoData] = useState<VideoProps | any>();
   const pathName = usePathname();
   const channel = params.channel;
 
@@ -32,19 +32,6 @@ const Subscription = ({ params }: { params: { channel: string } }) => {
   }) as VideoProps;
 
   console.log("Video Data: ", foundVideoData);
-
-  // useEffect(() => {
-  //   const channel = params.channel;
-  //   console.log("Channel parameter:", channel);
-
-  //   const foundVideoData = videos.find((video) => {
-  //     // console.log(titleToSlug(video.channelName) === channel);
-  //     return titleToSlug(video.channelName) === channel;
-  //   }) as VideoProps;
-
-  //   setVideoData(foundVideoData);
-  //   console.log("Video Data: ", videoData);
-  // }, [params.channel]);
 
   const channelNavItem: ChannelNavigationProps[] = [
     {
@@ -73,9 +60,8 @@ const Subscription = ({ params }: { params: { channel: string } }) => {
     },
   ];
 
-  // console.log("Video data:", videoData);
   return (
-    <div className="flex flex-col gap-6 w-full">
+    <div className="flex flex-col gap-4 w-full scrollbar-hide">
       {/* CHANNEL HEADER */}
       <div className="flex bg-[#181818] flex-col md:gap-1 pt-4 px-4 md:px-16">
         {/* CHANNEL PROFILE */}
@@ -104,7 +90,6 @@ const Subscription = ({ params }: { params: { channel: string } }) => {
           <NavigationMenu>
             <NavigationMenuList>
               {channelNavItem.map((item) => {
-                // const isActive = pathName === `/subscriptions/${params.channel}`
                 const isActive =
                   pathName === `/subscriptions/${params.channel}` &&
                   item.name === "Home"
@@ -162,6 +147,10 @@ const Subscription = ({ params }: { params: { channel: string } }) => {
       </div>
 
       {/* PLAYLIST */}
+      <div className="flex flex-col gap-4 px-4 md:px-16 mb-12">
+        <ChannelVideos title={"For you"} videos={videos.slice(0, 8)}/>
+        <ChannelVideos title={"Videos"} videos={videos.slice(9, 17)}/>
+      </div>
     </div>
   );
 };

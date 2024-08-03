@@ -15,11 +15,15 @@ import {
   volume,
 } from "@/assets";
 
-const VideoPlayer = (
-  { title }: { title: string },
-  width?: number,
-  height?: number
-) => {
+const VideoPlayer = ({
+  title,
+  width,
+  height,
+}: {
+  title: string;
+  width?: number;
+  height?: number;
+}) => {
   const videoData = videos.find((video) => {
     return titleToSlug(video.title) === titleToSlug(title);
   }) as VideoProps;
@@ -63,8 +67,8 @@ const VideoPlayer = (
           src={videoData?.thumbnail}
           alt="thumbnail"
           className="w-full h-auto md:min-w-[276px]"
-          width={width}
-          height={height}
+          // width={width}
+          // height={height}
         />
         <div className="absolute px-1 bottom-0 left-0 right-0 z-10">
           <div className="flex w-full">
@@ -74,20 +78,37 @@ const VideoPlayer = (
           </div>
           <div className="flex flex-row justify-between">
             <div className="flex items-center md:gap-2">
-              <Button className="hover:bg-transparent" variant="ghost" size={"icon"}>
+              <Button
+                className="hover:bg-transparent"
+                variant="ghost"
+                size={"icon"}
+              >
                 <Image src={play} alt="play" width={20} height={20} />
               </Button>
-              <Button className="hover:bg-transparent" variant="ghost" size={"icon"}>
+              <Button
+                className="hover:bg-transparent"
+                variant="ghost"
+                size={"icon"}
+              >
                 <Image src={next} alt="next" width={16} height={16} />
               </Button>
-              <Button className="hover:bg-transparent" variant="ghost" size={"icon"}>
+              <Button
+                className="hover:bg-transparent"
+                variant="ghost"
+                size={"icon"}
+              >
                 <Image src={volume} alt="volume" width={16} height={16} />
               </Button>
             </div>
 
             <div className="flex items-center md:gap-2">
               {videoIcons?.map((icon, index) => (
-                <Button className="hover:bg-transparent" key={index} variant="ghost" size={"icon"}>
+                <Button
+                  className="hover:bg-transparent"
+                  key={index}
+                  variant="ghost"
+                  size={"icon"}
+                >
                   <Image src={icon.src} alt={icon.alt} width={20} height={20} />
                 </Button>
               ))}

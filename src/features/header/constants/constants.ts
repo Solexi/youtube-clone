@@ -5,15 +5,16 @@ const headerRightSectionIcons = [create, apps, notifications];
 const categoryTags = [
   "All",
   "JavaScript",
+  "Rust",
   "Music",
+  "Tailwind",
+  "Redux",
   "Romantic Comedies",
   "Databases",
-  "Redux",
   "OVCC",
   "News",
   "Mixes",
   "Algorithms",
-  "Rust",
   "Docker",
   "Indian soap operas",
   "Live",
@@ -25,7 +26,6 @@ const categoryTags = [
   "Recently Uploaded",
   "Watched",
   "New to you",
-  "Tailwind",
   "AGT",
   "Karaoke"
 ];
