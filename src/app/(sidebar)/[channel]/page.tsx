@@ -76,7 +76,7 @@ const Subscription = () => {
       <div className="flex bg-[#181818] flex-col gap-1 pt-4 px-4 md:px-16">
         {/* CHANNEL PROFILE */}
         <div className="flex items-center justify-between gap-6">
-          <div className="flex flex-row gap-6 items-center">
+          <div className="flex flex-row gap-4 md:gap-6 items-center">
             {foundVideoData && (
               <Avatar className="h-16 w-16 md:h-20 md:w-20 object-fill shrink-0">
                 <AvatarImage src={foundVideoData?.channelAvatar.src} />
@@ -92,7 +92,7 @@ const Subscription = () => {
               </p>
             </div>
           </div>
-          <Button className="bg-primary font-bold text-white rounded-sm hover:bg-primary/80">
+          <Button className="bg-primary md:font-bold text-white rounded-sm hover:bg-primary/80">
             SUBSCRIBE
           </Button>
         </div>
