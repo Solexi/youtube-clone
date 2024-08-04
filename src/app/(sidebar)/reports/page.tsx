@@ -1,6 +1,6 @@
 const Reports = () => {
     return (
-        <div>
+        <div className="w-full h-full p-4 flex items-center justify-center">
             Reports Page
         </div>
     )

@@ -1,6 +1,6 @@
 const Settings = () => {
     return (
-        <div>
+        <div className="w-full h-full p-4 flex items-center justify-center">
             Settings Page
         </div>
     )

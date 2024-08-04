@@ -1,9 +1,9 @@
-const Library = () => {
+const Community = () => {
     return (
         <div className="w-full h-full p-4 flex items-center justify-center">
-            Library Page
+            Community
         </div>
     )
 }
 
-export default Library;
+export default Community;

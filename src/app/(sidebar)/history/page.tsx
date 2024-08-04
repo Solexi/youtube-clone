@@ -1,6 +1,6 @@
 const History = () => {
     return (
-        <div>
+        <div className="w-full h-full p-4 flex items-center justify-center">
             History Page
         </div>
     )
