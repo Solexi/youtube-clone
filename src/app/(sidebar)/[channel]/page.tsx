@@ -18,52 +18,62 @@ import Link from "next/link";
 import { search } from "@/assets";
 import { ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import VideoPlayer from "@/components/videoPlayer/videoPlayer";
 import ChannelVideos from "@/components/channelVideos/channelVideos";
 
-const Subscription = ({ params }: { params: { channel: string } }) => {
+const Subscription = () => {
   const pathName = usePathname();
-  const channel = params.channel;
+  const searchParams = useSearchParams();
+  const [channel, setChannel] = useState<string>();
+
+  useEffect(() => {
+    const param = pathName?.split("/")[1];
+    console.log("Param", param)
+    if (param) {
+      setChannel(param);
+    }
+  }, [pathName]);
 
   const foundVideoData = videos.find((video) => {
-    // console.log(titleToSlug(video.channelName) === channel);
-    return titleToSlug(video.channelName) === channel;
+    const slugTitle = titleToSlug(video.channelName);
+    // console.log("Video Channel: ", `@${slugTitle}`);
+    return `@${slugTitle}` === channel;
   }) as VideoProps;
 
-  console.log("Video Data: ", foundVideoData);
+  // console.log("Video Data: ", foundVideoData?.title);
 
   const channelNavItem: ChannelNavigationProps[] = [
     {
       name: "Home",
-      path: `/subscriptions/${params.channel}`,
+      path: `/${channel}`,
     },
     {
       name: "Videos",
-      path: `/subscriptions/${params.channel}/videos`,
+      path: `/${channel}/videos`,
     },
     {
       name: "Playlists",
-      path: `/subscriptions/${params.channel}/playlists`,
+      path: `/${channel}/playlists`,
     },
     {
       name: "Community",
-      path: `/subscriptions/${params.channel}/community`,
+      path: `/${channel}/community`,
     },
     {
       name: "Channels",
-      path: `/subscriptions/${params.channel}/channels`,
+      path: `/${channel}/channels`,
     },
     {
       name: "About",
-      path: `/subscriptions/${params.channel}/about`,
+      path: `/${channel}/about`,
     },
   ];
 
   return (
     <div className="flex flex-col gap-4 w-full scrollbar-hide">
       {/* CHANNEL HEADER */}
-      <div className="flex bg-[#181818] flex-col md:gap-1 pt-4 px-4 md:px-16">
+      <div className="flex bg-[#181818] flex-col gap-1 pt-4 px-4 md:px-16">
         {/* CHANNEL PROFILE */}
         <div className="flex items-center justify-between gap-6">
           <div className="flex flex-row gap-6 items-center">
@@ -87,11 +97,11 @@ const Subscription = ({ params }: { params: { channel: string } }) => {
           </Button>
         </div>
         <div className="flex items-center flex-row gap-6">
-          <NavigationMenu>
+          <NavigationMenu className="overflow-auto scrollbar-hide md:overflow-clip">
             <NavigationMenuList>
               {channelNavItem.map((item) => {
                 const isActive =
-                  pathName === `/subscriptions/${params.channel}` &&
+                  pathName === `/${channel}` &&
                   item.name === "Home"
                     ? true
                     : pathName.includes(titleToSlug(item.name));
@@ -127,24 +137,26 @@ const Subscription = ({ params }: { params: { channel: string } }) => {
       </div>
 
       {/* SMALL VIDEO PLAYER */}
-      <div className="px-4 md:px-16">
-        <div className="flex gap-6 pb-6 border-b border-border">
-          <div className="flex-1 w-[33%] md:max-w-[424px]">
-            <VideoPlayer title={foundVideoData?.title} />
-          </div>
-          <div className="hidden lg:flex flex-col gap-5 lg:max-w-[40%]">
-            <h2 className="font-normal text-base md:text-lg">
-              {foundVideoData.title}
-            </h2>
-            <div className="flex items-center gap-1 text-muted-foreground text-sm font-bold">
-              <span>{foundVideoData.views.toLocaleString()} views</span>
-              {" . "}
-              <span>{foundVideoData.datePosted}</span>
+      {foundVideoData && (
+          <div className="px-4 md:px-16">
+          <div className="flex gap-6 pb-6 border-b border-border">
+            <div className="flex-1 w-[33%] md:max-w-[424px]">
+              <VideoPlayer title={foundVideoData.title} />
             </div>
-            <p className="text-sm font-normal">{foundVideoData.description}</p>
+            <div className="hidden lg:flex flex-col gap-5 lg:max-w-[40%]">
+              <h2 className="font-normal text-base md:text-lg">
+                {foundVideoData.title}
+              </h2>
+              <div className="flex items-center gap-1 text-muted-foreground text-sm font-bold">
+                <span>{foundVideoData.views.toLocaleString()} views</span>
+                {" . "}
+                <span>{foundVideoData.datePosted}</span>
+              </div>
+              <p className="text-sm font-normal">{foundVideoData.description}</p>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* PLAYLIST */}
       <div className="flex flex-col gap-4 px-4 md:px-16 mb-12">

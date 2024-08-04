@@ -8,6 +8,7 @@ import { FC } from "react";
 import { AvatarFallback, AvatarImage } from "../ui/avatar";
 import { numberFormater } from "@/utils/numberFormater";
 import { useSearchParams } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const ThumbnailCard: FC<ThumbnailCardProps> = ({
   thumbnail,
@@ -26,7 +27,6 @@ const ThumbnailCard: FC<ThumbnailCardProps> = ({
   params.set('v', titleToSlug(title))
   return (
     <Link
-      // href={`/videos/${titleToSlug(title)}`}
       href={`/watch?${params.toString()}`}
       className={`${mobileView ? "flex gap-2" : ""} group`}
     >
@@ -35,9 +35,9 @@ const ThumbnailCard: FC<ThumbnailCardProps> = ({
         <Image
           src={thumbnail}
           alt={"video.thumbnail"}
-          className={`${mobileView ? "w-40 md:min-w-40" : ""} ${
+          className={`'w-full h-auto md:min-w-[276px]' ${mobileView ? "w-40 md:min-w-40" : ""} ${
             small ? "md:min-w-[52px]" : ""
-          } w-full h-auto md:min-w-[276px]`}
+          }`}
         />
         <p className="bg-background px-1 py-[3px] text-foreground font-normal text-[10px] absolute right-1 bottom-1">
           {duration}

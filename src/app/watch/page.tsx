@@ -12,8 +12,8 @@ import { Avatar } from "@/components/ui/avatar";
 import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { useState } from "react";
 import Comment from "@/features/comment";
-import { comment } from "postcss";
 import { XIcon } from "lucide-react";
+import Playlist from "@/features/playlist";
 
 const WatchVideo = () => {
   const searchParams = useSearchParams();
@@ -36,16 +36,17 @@ const WatchVideo = () => {
   };
 
   return (
-    <div className="flex relative md:mx-auto gap-6 max-w-5xl">
+    <div className="flex flex-col h-screen md:h-auto relative md:mx-auto gap-2 md:gap-6 max-w-5xl">
       {/* VIDEO PLAYER, DESCRIPTION AND COMMENTS */}
-      <div className="flex flex-col gap-4 md:gap-6 md:pl-6 pt-6">
-        <div className="w-[full] md:w-[50vw] lg:w-[40vw] sticky md:relative">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-6 md:pl-6 md:pt-6">
+        <div className="flex flex-col gap-4 md:gap-6">
+        <div className="w-[full] md:w-[50vw] lg:w-[40vw] sticky top-0 md:relative z-30">
           <VideoPlayer title={title ?? ""} />
         </div>
 
         {/* COMMENT DETAILS FOR MOBILE */}
         {isOpen && (
-          <div className="flex-col w-full bg-background absolute top-[38%] bottom-0 z-50">
+          <div className="flex-col w-full h-screen bg-background fixed top-[40%] bottom-0 z-50">
             <div className="flex flex-row w-full sticky justify-between text-lg font-bold py-2 border-b-2">
               Comments
               <Button
@@ -151,12 +152,12 @@ const WatchVideo = () => {
         <div className="hidden md:block">
           <Comment comment={videoData?.comments} />
         </div>
+        </div>
+        {/* PLAYLIST */}
+        <div className="flex-1 flex w-full px-3 md:px-0 md:w-[40vw] pt-6 md:pt-0 md:pr-6">
+          <Playlist videoData={videoData} />
+        </div>
       </div>
-
-      {/* PLAYLIST */}
-      {/* <div className="md:w-[50vw] h-screen">
-
-      </div> */}
     </div>
   );
 };

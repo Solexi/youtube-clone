@@ -28,12 +28,12 @@ const SidebarSection: FC<SidebarSectionProps> = ({
 
       {items.slice(0, defaultShow).map((item) => {
         let url = titleToSlug(item.text);
-        if (title) {
-          url = `${titleToSlug(title)}/${url}`;
-          // url = titleToSlug(title) + "/" + titleToSlug(item.text)
+        // let url = "";
+        if (title?.toLowerCase() === 'subscriptions') {
+          url = `@${url}`;
         }
         url = `/${url}`;
-        const isActive = pathName.includes(url);
+        const isActive = pathName.includes(`${url}`);
         return (
           <Link
             key={item.text}

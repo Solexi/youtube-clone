@@ -27,7 +27,7 @@ const ChannelVideos = ({
           <p className="font-bold text-muted-foreground">PLAY ALL</p>
         </Link>
       </div>
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(214px,1fr))] gap-x-1 gap-y-6 border-border pb-8 border-b-[1px]">
+      <div className="hidden md:grid grid-cols-[repeat(auto-fit,minmax(214px,1fr))] gap-x-2 gap-y-6 border-border pb-8 border-b-[1px]">
         {videos.map((video) => (
           <ThumbnailCard
             key={video.title}
@@ -41,6 +41,24 @@ const ChannelVideos = ({
             hideAvatar
             small
           />
+        ))}
+      </div>
+
+      <div className="flex md:hidden flex-row flex-1 gap-4 overflow-auto scrollbar-hide border-border pb-8 border-b-[1px] ">
+        {videos.map((video) => (
+          <div key={video.title} className="flex min-w-[80vw]">
+            <ThumbnailCard
+              title={video.title}
+              thumbnail={video.thumbnail}
+              avatar={video.channelAvatar}
+              channelName={video.channelName}
+              views={video.views}
+              datePosted={video.datePosted}
+              duration={video.duration}
+              hideAvatar
+              small
+            />
+          </div>
         ))}
       </div>
     </div>
