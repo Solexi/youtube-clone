@@ -4,14 +4,15 @@ import ThumbnailCardFallback from "@/components/thumbnailFallback/thumbnailFallb
 import { videos } from "@/constants/dummyVideoData";
 import { CategoryHeader } from "@/features/header";
 import { VideoProps } from "@/types/types";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 
-// [repeat(auto-fit,minmax(276px,1fr))]
 const HomeContent = () => {
   const [filteredVideos, setFilteredVideos] = useState<VideoProps[]>();
   const searchParams = useSearchParams();
   const tag = searchParams.get("tag");
+  const search = searchParams.get("search")
+  console.log(search)
 
   useEffect(() => {
     if (tag) {
@@ -25,14 +26,21 @@ const HomeContent = () => {
     } else {
       setFilteredVideos(videos);
     }
-  }, [tag]);
+
+    if (search) {
+      const filtered = videos.filter((v) => {
+        return v.title.toLowerCase().includes(search);
+      });
+      setFilteredVideos(filtered);
+    }
+  }, [tag, search]);
 
   return (
     <div className="flex flex-col scrollbar-hide custom-scrollbar overflow-auto h-full">
       <CategoryHeader />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(276px,1fr))] px-6 pt-6 pb-14 md:pb-16 gap-x-4 gap-y-10">
-        {filteredVideos?.map((video) => (
-          <Suspense key={video.title} fallback={<ThumbnailCardFallback />}>
+        {filteredVideos?.map((video, i) => (
+          <Suspense key={i} fallback={<ThumbnailCardFallback />}>
             <ThumbnailCard
               key={video.title}
               title={video.title}

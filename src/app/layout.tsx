@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/features/header/components/header/header";
+import { SidebarProvider } from "@/features/sidebar/hooks/context/SidebarContext";
+import { SearchProvider } from "@/hooks/contexts/SearchContext";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -18,16 +20,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="./favicon.ico" />
       </head>
       <body className={`max-w-[100vw] ${roboto.className}`}>
-        <Header />
-        <div className="flex flex-col h-[calc(100vh-56px)] overflow-auto custom-scrollbar">
-          {children}
-        </div>
+        <SidebarProvider>
+          <SearchProvider>
+            <Header />
+          </SearchProvider>
+          <div className="flex flex-col h-[calc(100vh-56px)] overflow-auto custom-scrollbar">
+            {children}
+          </div>
+        </SidebarProvider>
       </body>
     </html>
   );
