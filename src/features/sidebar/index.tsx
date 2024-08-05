@@ -1,10 +1,10 @@
 "use client"
 import { useEffect } from "react";
-import Navbar from "./components/navbar/navbar";
-import SidebarSection from "./components/sections/sections";
-import { navbarItems, sidebarFooter, sidebarSections } from "./constants/constants";
+import Navbar from "@/features/sidebar/components/navbar/navbar";
+import SidebarSection from "@/features/sidebar/components/sections/sections";
+import { navbarItems, sidebarFooter, sidebarSections } from "@/features/sidebar/constants/constants";
 import Link from "next/link";
-import { useSidebarContext } from "./hooks/context/SidebarContext";
+import { useSidebarContext } from "@/features/sidebar/hooks/context/SidebarContext";
 import Image from "next/image";
 import { titleToSlug } from "@/utils/slug";
 import { usePathname } from "next/navigation";
