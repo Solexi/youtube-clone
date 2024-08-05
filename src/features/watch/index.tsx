@@ -94,7 +94,7 @@ const WatchContent = () => {
                 <div className=" w-full flex flex-col gap-3">
                   <div className="flex justify-between items-center">
                     <div className="font-normal leading-normal text-muted-foreground">
-                      <Link href={`/@${videoData.channelName}`}><p className="text-sm">{videoData.channelName}</p></Link>
+                      <Link href={`/@${titleToSlug(videoData.channelName)}`}><p className="text-sm">{videoData.channelName}</p></Link>
                       <p className="text-xs">{`${numberFormater(
                         videoData.subscribers
                       )} subscribers`}</p>
