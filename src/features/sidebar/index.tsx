@@ -1,7 +1,7 @@
 "use client"
 import { useEffect } from "react";
-import Navbar from "@/features/sidebar/components/navbar/navbar";
-import SidebarSection from "@/features/sidebar/components/sections/sections";
+import Navbar from "@/features/sidebar/components/navbar/Navbar";
+import SidebarSection from "@/features/sidebar/components/sections/Sections";
 import { navbarItems, sidebarFooter, sidebarSections } from "@/features/sidebar/constants/constants";
 import Link from "next/link";
 import { useSidebarContext } from "@/features/sidebar/hooks/context/SidebarContext";
