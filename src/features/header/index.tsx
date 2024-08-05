@@ -1,5 +1,5 @@
-import Header from "@/features/header/components/header/Header";
-import CategoryHeader from "@/features/header/components/categoryHeader/CategoryHeader";
+import Header from "@/features/header/components/header";
+import CategoryHeader from "@/features/header/components/categoryHeader";
 
 
 export {

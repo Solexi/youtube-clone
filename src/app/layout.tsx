@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "@/features/header/components/header/Header";
+import Header from "@/features/header/components/header";
 import { SidebarProvider } from "@/features/sidebar/hooks/context/SidebarContext";
 import { SearchProvider } from "@/hooks/contexts/SearchContext";
 
