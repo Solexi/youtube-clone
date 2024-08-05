@@ -36,9 +36,9 @@ const HomeContent = () => {
   }, [tag, search]);
 
   return (
-    <div className="flex flex-col scrollbar-hide custom-scrollbar overflow-auto h-full">
+    <div className="flex flex-col scrollbar-hide custom-scrollbar overflow-auto h-screen md:h-auto">
       <CategoryHeader />
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(276px,1fr))] px-6 pt-6 pb-2 md:pb-16 gap-x-4 gap-y-10">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(276px,1fr))] px-6 pt-6 pb-20 md:pb-16 gap-x-4 gap-y-10">
         {filteredVideos?.map((video, i) => (
           <Suspense key={i} fallback={<ThumbnailCardFallback />}>
             <ThumbnailCard

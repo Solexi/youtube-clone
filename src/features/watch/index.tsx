@@ -14,6 +14,7 @@ import { useState } from "react";
 import Comment from "@/features/comment";
 import { XIcon } from "lucide-react";
 import Playlist from "@/features/playlist";
+import Link from "next/link";
 
 const WatchContent = () => {
   const searchParams = useSearchParams();
@@ -93,7 +94,7 @@ const WatchContent = () => {
                 <div className=" w-full flex flex-col gap-3">
                   <div className="flex justify-between items-center">
                     <div className="font-normal leading-normal text-muted-foreground">
-                      <p className="text-sm">{videoData.channelName}</p>
+                      <Link href={`/@${videoData.channelName}`}><p className="text-sm">{videoData.channelName}</p></Link>
                       <p className="text-xs">{`${numberFormater(
                         videoData.subscribers
                       )} subscribers`}</p>
@@ -128,7 +129,7 @@ const WatchContent = () => {
             {/* COMMENT BOX FOR MOBILE */}
             <div
               onClick={handleOpen}
-              className="md:hidden flex-col mx-3 w-[93%] rounded-sm bg-background-3 p-3"
+              className="md:hidden flex-col mx-3 w-[93%] rounded-sm bg-background-3 px-5 py-3"
             >
               <p className="text-sm font-medium">
                 Comments{" "}

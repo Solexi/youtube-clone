@@ -71,7 +71,7 @@ const Subscription = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-4 w-full scrollbar-hide">
+    <div className="flex flex-col gap-4 w-full scrollbar-hide h-screen md:h-auto">
       {/* CHANNEL HEADER */}
       <div className="flex bg-[#181818] flex-col gap-1 pt-4 px-4 md:px-16">
         {/* CHANNEL PROFILE */}
