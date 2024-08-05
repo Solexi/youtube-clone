@@ -7,7 +7,7 @@ import Link from "next/link";
 const Sidebar = () => {
   return (
     <>
-      <div className="bg-background-3 max-h-[calc(100vh-56px)] hidden md:block w-64 overflow-auto scrollbar-hidden shrink-0">
+      <div className="bg-background-3 max-h-[calc(100vh-56px)] hidden md:block w-64 overflow-auto custom-scrollbar shrink-0">
         {sidebarSections.map((sec, i) => (
           <SidebarSection
             key={i}

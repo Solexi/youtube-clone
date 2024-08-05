@@ -20,9 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="./favicon.ico" />
+      </head>
       <body className={`max-w-[100vw] ${roboto.className}`}>
         <Header />
-        <div className="flex flex-col h-[calc(100vh-56px)] overflow-auto scrollbar-hidden">{children}</div>
+        <div className="flex flex-col h-[calc(100vh-56px)] overflow-auto custom-scrollbar">
+          {children}
+        </div>
       </body>
     </html>
   );

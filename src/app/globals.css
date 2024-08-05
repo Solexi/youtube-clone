@@ -40,23 +40,23 @@
   }
 }
 
-.scrollbar-hidden::-webkit-scrollbar {
+.custom-scrollbar::-webkit-scrollbar {
   visibility: hidden;
   width: 10px;
 }
 
-.scrollbar-hidden::-webkit-scrollbar-thumb {
+.custom-scrollbar::-webkit-scrollbar-thumb {
   visibility: hidden;
   width: 10px;
 }
 
-.scrollbar-hidden:hover::-webkit-scrollbar {
+.custom-scrollbar:hover::-webkit-scrollbar {
   visibility: visible;
   width: 10px;
   background: #00000000;
 }
 
-.scrollbar-hidden:hover::-webkit-scrollbar-thumb {
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
   visibility: visible;
   width: 10px;
   background: #303030;
